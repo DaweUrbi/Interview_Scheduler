@@ -18,13 +18,13 @@ const Appointment = (props) => {
     setDayOfWeek(props.day)
   }, [props.day])
 
-  useEffect(() => {
-    fetch(`http://localhost:8000/interviewers/${dayOfWeek}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setInterviewers(data);
-      });
-  }, [dayOfWeek]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:8000/interviewers/${dayOfWeek}`)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setInterviewers(data);
+  //     });
+  // }, [dayOfWeek]);
 
   function save(name, interviewer) {
     const interview = {
